@@ -4,7 +4,7 @@
 As taken from Wikipedia:
 >Forth is an imperative stack-based computer programming language
 
-This version of the interpreter/compiler isn't optimised at all because it ~~passes around literal objects instead of memory addresses~~(basic implemntation of memory addresses is completed as of version 0.2), and the dictionary and variable "heap" are distinct entities. This should be fixed in the next version which will also be written in python, but the one after that will be in C and 5th.
+This version of the interpreter/compiler isn't optimised at all because it ~~passes around literal objects instead of memory addresses~~(basic implementation of memory addresses is completed as of version 0.2), and the dictionary and variable "heap" are distinct entities. This should be fixed in the next version which will also be written in python, but the one after that will be in C and 5th.
 
 # Language Specifics
 5th, like Forth, is stack-based. That means all values are read/pushed/popped of a stack.
