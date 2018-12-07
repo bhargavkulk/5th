@@ -1,5 +1,5 @@
 """
-5TH VERSION 1
+5TH VERSION 0.1
 """
 
 class Word:
@@ -298,17 +298,13 @@ class ForthMachine:
 		else:
 			print('=> ..', *self.data_stack[-5:])
 
-def main():
-	m = ForthMachine()
-	m.init_stdlib()
-	while True:
-		try:
-			m.source = input('forth> ')
-			m.interpret()
-		except KeyboardInterrupt:
-			print()
-		else:
-			m.show_stack()
+m = ForthMachine()
+m.init_stdlib()
 
-if __name__ == '__main__':
-	main()
+while True:
+	m.source = input('forth> ')
+	m.compile()
+	if len(m.data_stack) > 5:
+		print('=> ...', *m.data_stack[:-5])
+	else:
+		print(m.data_stack)
